@@ -31,13 +31,17 @@ namespace :bump do
   def bump_and_push(version)
     sh %(gem bump --version #{version})
     update_changelog
-    sh %(git add #{version_rb} Gemfile.lock CHANGELOG.md)
+    sh %(git add #{version_rb} Gemfile.lock #{changelog_md})
     sh %(git commit -m "Bumping version to #{current_version}")
     sh %(gem tag --push)
   end
 
   def version_rb
-    File.join(EdbModel.root, 'lib', 'search_solr_tools', 'version.rb')
+    File.join(SearchSolrTools.root, 'lib', 'search_solr_tools', 'version.rb')
+  end
+
+  def changelog_md
+    File.join(SearchSolrTools.root, 'CHANGELOG.md')
   end
 
   def current_version
