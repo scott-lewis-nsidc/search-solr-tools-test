@@ -45,6 +45,7 @@ namespace :bump do
   end
 
   def update_changelog
+    date = Time.now.strftime('%Y-%m-%d')
     sh %(sed -i "s/^## Unreleased$/## v#{current_version} (#{date})/" #{changelog_md})
   end
 end
