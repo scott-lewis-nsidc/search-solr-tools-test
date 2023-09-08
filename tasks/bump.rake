@@ -29,6 +29,7 @@ namespace :bump do
   end
 
   def bump_and_push(version)
+    sh %(git status)
     sh %(gem bump --version #{version})
     update_changelog
     sh %(git add #{version_rb} Gemfile.lock #{changelog_md})
