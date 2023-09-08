@@ -29,28 +29,12 @@ namespace :bump do
   end
 
   def bump_and_push(version)
-    p "------ 1 ------"
-    sh %(git status)
-    p "------ 2 ------"
     sh %(gem bump --version #{version})
-    p "------ 3 ------"
     update_changelog
-    p "------ 4 ------"
     sh %(bundle list > /dev/null)
     sh %(git add #{version_rb} Gemfile.lock #{changelog_md})
-    p "------ 5 ------"
-    sh %(git status)
-    p "------ 6 ------"
     sh %(git commit -m "Bumping version to #{current_version}")
-    p "------ 7 ------"
-    sh %(git status)
-    p "------ 8 ------"
-    sh %(bundle list > /dev/null)
-    p "------ 8A ------"
-    sh %(git status)
-    p "------ 8B ------"
     sh %(gem tag --push)
-    p "------ 9 ------"
   end
 
   def version_rb
