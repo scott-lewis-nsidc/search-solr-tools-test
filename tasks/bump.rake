@@ -36,6 +36,7 @@ namespace :bump do
     p "------ 3 ------"
     update_changelog
     p "------ 4 ------"
+    sh %(bundle list > /dev/null)
     sh %(git add #{version_rb} Gemfile.lock #{changelog_md})
     p "------ 5 ------"
     sh %(git status)
@@ -44,7 +45,7 @@ namespace :bump do
     p "------ 7 ------"
     sh %(git status)
     p "------ 8 ------"
-    sh %(bundle list)
+    sh %(bundle list > /dev/null)
     p "------ 8A ------"
     sh %(git status)
     p "------ 8B ------"
