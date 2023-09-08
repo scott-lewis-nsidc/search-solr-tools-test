@@ -5,7 +5,7 @@ require 'search_solr_tools/version'
 gem_files = %(CHANGELOG.md COPYING README.md bin/ lib/ search_solr_tools.gemspec)
 
 Gem::Specification.new do |spec|
-  spec.name          = 'search_solr_tools'
+  spec.name          = 'search_solr_tools_test'
   spec.version       = SearchSolrTools::VERSION
   spec.authors       = ['Chris Chalstrom', 'Michael Brandt', 'Jonathan Kovarik', 'Luis Lopez', 'Stuart Reed', 'Julia Collins', 'Scott Lewis']
   spec.email         = ['cchalstr@nsidc.org', 'mbrandt@colorado.edu', 'kovarik@nsidc.org', 'luis.lopezespinosa@colorado.edu', 'stuart.reed@colorado.edu', 'jcollins@nsidc.org', 'scott.lewis@nsidc.org']
