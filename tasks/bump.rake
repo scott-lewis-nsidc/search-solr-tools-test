@@ -44,6 +44,10 @@ namespace :bump do
     p "------ 7 ------"
     sh %(git status)
     p "------ 8 ------"
+    sh %(bundle list)
+    p "------ 8A ------"
+    sh %(git status)
+    p "------ 8B ------"
     sh %(gem tag --push)
     p "------ 9 ------"
   end
