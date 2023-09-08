@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    search_solr_tools (9.0.2)
+    search_solr_tools_test (9.1.0)
       ffi-geos (~> 2.4.0)
       iso8601 (~> 0.13.0)
       multi_json (~> 1.15.0)
@@ -171,7 +171,7 @@ DEPENDENCIES
   rubocop (~> 1.54.2)
   rubocop-rake (~> 0.6.0)
   rubocop-rspec (~> 2.22.0)
-  search_solr_tools!
+  search_solr_tools_test!
   webmock (~> 3.18.1)
 
 RUBY VERSION
