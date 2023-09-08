@@ -1,4 +1,4 @@
-## Unreleased
+## v6.5.3 (2023-09-08)
 
   - Adding GitHub Action workflows for continuous integration features
 
