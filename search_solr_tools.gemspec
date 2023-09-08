@@ -35,6 +35,7 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'rsolr', '~> 2.5.0'
   spec.add_runtime_dependency 'thor', '~> 1.2.2'
 
+  spec.add_development_dependency 'bump', '~> 0.10.0'
   spec.add_development_dependency 'gem-release', '~> 2.2.2'
   spec.add_development_dependency 'guard', '~> 2.18.0'
   spec.add_development_dependency 'guard-rspec', '~> 4.7.3'
