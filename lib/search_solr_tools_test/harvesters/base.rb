@@ -7,7 +7,7 @@ require 'rest-client'
 require 'rsolr'
 require 'time'
 
-require 'search_solr_tools'
+require 'search_solr_tools_test'
 require_relative '../helpers/iso_namespaces'
 require_relative '../helpers/solr_format'
 

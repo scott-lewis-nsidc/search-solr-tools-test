@@ -5,7 +5,7 @@ require 'nokogiri'
 require 'open-uri'
 require 'webmock/rspec'
 
-require 'search_solr_tools'
+require 'search_solr_tools_test'
 require 'search_solr_tools/helpers/solr_format'
 require 'search_solr_tools/helpers/harvest_status'
 

@@ -2,7 +2,7 @@
 
 require 'rgeo/geo_json'
 
-require 'search_solr_tools'
+require 'search_solr_tools_test'
 require_relative '../helpers/solr_format'
 require_relative '../helpers/translate_temporal_coverage'
 require_relative '../helpers/translate_spatial_coverage'

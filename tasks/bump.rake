@@ -38,7 +38,7 @@ namespace :bump do
   end
 
   def version_rb
-    File.join(root, 'lib', 'search_solr_tools', 'version.rb')
+    File.join(root, 'lib', 'search_solr_tools_test', 'version.rb')
   end
 
   def changelog_md
@@ -60,6 +60,6 @@ namespace :bump do
   end
 
   def spec
-    Gem::Specification.find_by_name('search_solr_tools')
+    Gem::Specification.find_by_name('search_solr_tools_test')
   end
 end
