@@ -32,6 +32,7 @@ namespace :bump do
     sh %(gem bump --version #{version})
     update_changelog
     sh %(git add #{version_rb} Gemfile.lock #{changelog_md})
+    sh %(git status)
     sh %(git commit -m "Bumping version to #{current_version}")
     sh %(gem tag --push)
   end
