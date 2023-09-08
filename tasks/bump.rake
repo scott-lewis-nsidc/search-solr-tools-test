@@ -37,11 +37,11 @@ namespace :bump do
   end
 
   def version_rb
-    File.join(SearchSolrTools.root, 'lib', 'search_solr_tools', 'version.rb')
+    File.join(root, 'lib', 'search_solr_tools', 'version.rb')
   end
 
   def changelog_md
-    File.join(SearchSolrTools.root, 'CHANGELOG.md')
+    File.join(root, 'CHANGELOG.md')
   end
 
   def current_version
@@ -51,5 +51,14 @@ namespace :bump do
   def update_changelog
     date = Time.now.strftime('%Y-%m-%d')
     sh %(sed -i "s/^## Unreleased$/## v#{current_version} (#{date})/" #{changelog_md})
+  end
+
+  # The very top of the working directory.
+  def root
+    spec.gem_dir
+  end
+
+  def spec
+    Gem::Specification.find_by_name('search_solr_tools')
   end
 end
