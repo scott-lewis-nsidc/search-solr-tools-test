@@ -1,4 +1,4 @@
-## Unreleased
+## v10.0.0 (2023-09-08)
  
   - A sample test of testing samples
 
