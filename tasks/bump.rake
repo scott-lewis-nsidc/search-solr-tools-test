@@ -27,39 +27,40 @@ namespace :bump do
   task :manual, [:ver] do |_t, args|
     bump_and_push(args[:ver])
   end
+end
 
-  def bump_and_push(version)
-    sh %(gem bump --version #{version})
-    update_changelog
-    sh %(bundle list > /dev/null)
-    sh %(git add #{version_rb} Gemfile.lock #{changelog_md})
-    sh %(git commit -m "Bumping version to #{current_version}")
-    sh %(gem tag --push)
-  end
 
-  def version_rb
-    File.join(root, 'lib', 'search_solr_tools_test', 'version.rb')
-  end
+def bump_and_push(version)
+  sh %(gem bump --version #{version})
+  update_changelog
+  sh %(bundle list > /dev/null)
+  sh %(git add #{version_rb} Gemfile.lock #{changelog_md})
+  sh %(git commit -m "Bumping version to #{current_version}")
+  sh %(gem tag --push)
+end
 
-  def changelog_md
-    File.join(root, 'CHANGELOG.md')
-  end
+def version_rb
+  File.join(root, 'lib', 'search_solr_tools_test', 'version.rb')
+end
 
-  def current_version
-    Bump::Bump.current
-  end
+def changelog_md
+  File.join(root, 'CHANGELOG.md')
+end
 
-  def update_changelog
-    date = Time.now.strftime('%Y-%m-%d')
-    sh %(sed -i "s/^## Unreleased$/## v#{current_version} (#{date})/" #{changelog_md})
-  end
+def current_version
+  Bump::Bump.current
+end
 
-  # The very top of the working directory.
-  def root
-    spec.gem_dir
-  end
+def update_changelog
+  date = Time.now.strftime('%Y-%m-%d')
+  sh %(sed -i "s/^## Unreleased$/## v#{current_version} (#{date})/" #{changelog_md})
+end
 
-  def spec
-    Gem::Specification.find_by_name('search_solr_tools_test')
-  end
+# The very top of the working directory.
+def root
+  spec.gem_dir
+end
+
+def spec
+  Gem::Specification.find_by_name('search_solr_tools_test')
 end
