@@ -29,7 +29,6 @@ namespace :bump do
   end
 end
 
-
 def bump_and_push(version)
   sh %(gem bump --version #{version})
   update_changelog
