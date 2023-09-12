@@ -10,10 +10,8 @@ name: Tests
 on:
   workflow_dispatch:
   push:
-    branches: [ "srch-112" ]
-  #   branches: [ "main" ]
-  # pull_request:
-  #   branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 permissions:
   contents: read
