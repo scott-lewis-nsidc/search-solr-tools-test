@@ -1,4 +1,4 @@
-## Unreleased
+## v10.3.0 (2023-09-12)
 
   - Trying again
 
