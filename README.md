@@ -25,7 +25,7 @@ Clone the repository, and install all requirements as noted below.
 #### Configuration
 
 Once you have the code and requirements, edit the configuration file in
-`lib/search_solr_tools/config/environments.yaml` to match your environment. The
+`lib/search_solr_tools_test/config/environments.yaml` to match your environment. The
 configuration values are set by environment for each harvester (or specified in
 the `common` settings list), with the environment overriding `common` if a
 different setting is specified for a given environment.
@@ -167,7 +167,7 @@ Outside of NSIDC, setup solr using the instructions found in the
 
 The harvester requires additional metadata from services that may not yet be
 publicly available, which are referenced in
-`lib/search_solr_tools/config/environments.yaml`.
+`lib/search_solr_tools_test/config/environments.yaml`.
 
 To utilize the gem, build and install the **search_solr_tools** gem. This will
 add an executable `search_solr_tools` to the path (source is in

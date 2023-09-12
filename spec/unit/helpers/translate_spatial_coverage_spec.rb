@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'search_solr_tools/helpers/translate_spatial_coverage'
+require 'search_solr_tools_test/helpers/translate_spatial_coverage'
 
 describe SearchSolrTools::Helpers::TranslateSpatialCoverage do
   it 'translates GeoJSON polygon to spatial display str' do

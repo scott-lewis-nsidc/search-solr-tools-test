@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require 'spec_helper'
-require 'search_solr_tools/errors/harvest_error'
+require 'search_solr_tools_test/errors/harvest_error'
 
 describe SearchSolrTools::Errors::HarvestError do
   let(:status) { SearchSolrTools::Helpers::HarvestStatus.new }
