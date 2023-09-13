@@ -22,21 +22,7 @@ namespace :bump do
   task :major do
     bump_and_push('major')
   end
-
-  desc 'Bump to a manually-specified version (in x.x.x... form; do not add initial "v")'
-  task :manual, [:ver] do |_t, args|
-    bump_and_push(args[:ver])
-  end
 end
-
-# def bump_and_push(version)
-#   sh %(gem bump --version #{version})
-#   update_changelog
-#   sh %(bundle list > /dev/null)
-#   sh %(git add #{version_rb} Gemfile.lock #{changelog_md})
-#   sh %(git commit -m "Bumping version to #{current_version}")
-#   sh %(gem tag --push)
-# end
 
 def bump_and_push(version)
   update_changelog(version)

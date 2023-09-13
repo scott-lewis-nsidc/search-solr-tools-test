@@ -146,7 +146,6 @@ The sub-tasks associated with bump will allow the type of bump to be determined:
 | `rake bump:patch`         | Increase the current patch number (v1.2.0 -> v1.2.1; v1.2.4 -> v1.2.4)                             |
 | `rake bump:minor`         | Increase the minor version number (v1.2.0 -> v1.3.0; v1.2.4 -> v1.3.0)                             |
 | `rake bump:major`         | Increase the major version number (v1.2.0 _> v2.0.0; v1.2.4 -> v2.0.0)                             |
- | `rake bump:manual[1.2.3]` | Manually set the version number; do not include the leading `v`                                    |
 
 Using any bump other than `pre` will remove the `pre` suffix from the version as well.
 
