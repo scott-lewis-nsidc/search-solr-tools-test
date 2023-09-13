@@ -1,4 +1,5 @@
 ## Unreleased
+## v110.4.2 (2023-09-13)
 
   - Testing bump gem
 
