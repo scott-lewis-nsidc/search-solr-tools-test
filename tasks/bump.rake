@@ -40,7 +40,7 @@ end
 
 def bump_and_push(version)
   Bump::Bump.run(version, tag: true, commit: true, changelog: true)
-  sh %(git push)
+  sh %(git push --tags)
 end
 
 def version_rb
