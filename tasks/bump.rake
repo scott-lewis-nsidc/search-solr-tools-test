@@ -39,7 +39,9 @@ end
 # end
 
 def bump_and_push(version)
-  Bump::Bump.run(version, tag: true, commit: true, changelog: true)
+  update_changelog(version)
+  Bump::Bump.run(version, tag: true, commit: true, changelog: false)
+
   sh %(git push --tags)
 end
 
@@ -51,13 +53,11 @@ def changelog_md
   File.join(root, 'CHANGELOG.md')
 end
 
-def current_version
-  Bump::Bump.current
-end
-
-def update_changelog
+def update_changelog(version)
   date = Time.now.strftime('%Y-%m-%d')
-  sh %(sed -i "s/^## Unreleased$/## v#{current_version} (#{date})/" #{changelog_md})
+  next_ver = Bump::Bump.next_version(version)
+  sh %(sed -i "s/^## Unreleased$/## v#{next_ver} (#{date})/" #{changelog_md})
+  sh %(git add #{changelog_md})
 end
 
 # The very top of the working directory.
