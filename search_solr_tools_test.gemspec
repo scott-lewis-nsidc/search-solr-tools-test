@@ -1,11 +1,11 @@
 $LOAD_PATH.unshift File.expand_path('../lib', __FILE__)
-require 'search_solr_tools/version'
+require 'search_solr_tools_test/version'
 
 # no need for tests or dev files like .rubocop.yml to be packaged with the gem
-gem_files = %(CHANGELOG.md COPYING README.md bin/ lib/ search_solr_tools.gemspec)
+gem_files = %(CHANGELOG.md COPYING README.md bin/ lib/ search_solr_tools_test.gemspec)
 
 Gem::Specification.new do |spec|
-  spec.name          = 'search_solr_tools'
+  spec.name          = 'search_solr_tools_test'
   spec.version       = SearchSolrTools::VERSION
   spec.authors       = ['Chris Chalstrom', 'Michael Brandt', 'Jonathan Kovarik', 'Luis Lopez', 'Stuart Reed', 'Julia Collins', 'Scott Lewis']
   spec.email         = ['cchalstr@nsidc.org', 'mbrandt@colorado.edu', 'kovarik@nsidc.org', 'luis.lopezespinosa@colorado.edu', 'stuart.reed@colorado.edu', 'jcollins@nsidc.org', 'scott.lewis@nsidc.org']
@@ -28,13 +28,14 @@ Gem::Specification.new do |spec|
   spec.add_runtime_dependency 'ffi-geos', '~> 2.4.0'
   spec.add_runtime_dependency 'iso8601', '~> 0.13.0'
   spec.add_runtime_dependency 'multi_json', '~> 1.15.0'
-  spec.add_runtime_dependency 'nokogiri', '~> 1.15.3'
+  spec.add_runtime_dependency 'nokogiri', '~> 1.15.4'
   spec.add_runtime_dependency 'rest-client', '~> 2.1.0'
   spec.add_runtime_dependency 'rgeo', '~> 3.0.0'
   spec.add_runtime_dependency 'rgeo-geojson', '~> 2.1.1'
   spec.add_runtime_dependency 'rsolr', '~> 2.5.0'
   spec.add_runtime_dependency 'thor', '~> 1.2.2'
 
+  spec.add_development_dependency 'bump', '~> 0.10.0'
   spec.add_development_dependency 'gem-release', '~> 2.2.2'
   spec.add_development_dependency 'guard', '~> 2.18.0'
   spec.add_development_dependency 'guard-rspec', '~> 4.7.3'

@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 # frozen_string_literal: true
 
-require 'search_solr_tools'
+require 'search_solr_tools_test'
 require 'thor'
 
 # rubocop:disable Metrics/AbcSize

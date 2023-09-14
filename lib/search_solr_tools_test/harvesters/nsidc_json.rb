@@ -3,7 +3,7 @@
 require 'json'
 require 'rest-client'
 
-require 'search_solr_tools'
+require 'search_solr_tools_test'
 
 module SearchSolrTools
   module Harvesters

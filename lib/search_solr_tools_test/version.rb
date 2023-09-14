@@ -1,5 +1,5 @@
 # frozen_string_literal: true
 
 module SearchSolrTools
-  VERSION = '6.4.0'
+  VERSION = '10.8.0'
 end

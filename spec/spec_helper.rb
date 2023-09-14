@@ -5,9 +5,9 @@ require 'nokogiri'
 require 'open-uri'
 require 'webmock/rspec'
 
-require 'search_solr_tools'
-require 'search_solr_tools/helpers/solr_format'
-require 'search_solr_tools/helpers/harvest_status'
+require 'search_solr_tools_test'
+require 'search_solr_tools_test/helpers/solr_format'
+require 'search_solr_tools_test/helpers/harvest_status'
 
 GZIP_DEFLATE_IDENTITY = 'gzip;q=1.0,deflate;q=0.6,identity;q=0.3'
 

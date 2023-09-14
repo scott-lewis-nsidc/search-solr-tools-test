@@ -1,3 +1,72 @@
+## v10.8.0 (2023-09-14)
+
+  - Fixing workflow part 2
+
+## v10.7.0 (2023-09-14)
+
+  - Fixing workflow
+
+## v10.6.0 (2023-09-14)
+
+  - Removing task
+  - updating workflow
+
+## v10.5.0 (2023-09-13)
+
+  - More testing
+
+## v10.4.3 (2023-09-13)
+
+  - This is a test
+
+## v10.4.2 (2023-09-13)
+
+  - Testing bump gem
+
+## v10.3.0 (2023-09-12)
+
+  - Trying again
+
+## v10.2.6 (2023-09-12)
+
+  - Next attempt
+
+## v10.2.5 (2023-09-12)
+
+  - This is another test
+
+## v10.2.4 (2023-09-12)
+
+  - Why?
+
+## v10.2.3 (2023-09-12)
+
+  - Patchifcation Process
+
+## v10.2.2 (2023-09-12)
+
+  - Another le patch
+
+## v10.2.1 (2023-09-12)
+
+  - Le Patch
+
+## v10.2.0 (2023-09-12)
+
+  - Updating
+
+## v10.1.0 (2023-09-08)
+
+  - Another test
+
+## v10.0.0 (2023-09-08)
+ 
+  - A sample test of testing samples
+
+## v9.0.2 (2023-09-08)
+
+  - Adding GitHub Action workflows for continuous integration features
+
 ## v6.4.0 (2023-08-14)
 
   - Fixed a bug with the sanitization, which was trying to modify the
