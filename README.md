@@ -161,7 +161,7 @@ The CI workflow has the credentials set up to push to RubyGems, so no user inter
 is needed, and the workflow itself does not have to be manually triggered.
 
 If needed, the release can also be done locally by running the command
-`bundle exec rake release:publish`. In order for this to work, you will need to have a
+`bundle exec gem release`. In order for this to work, you will need to have a
 local copy of current Rubygems API key for the _NSIDC developer user_ account in
 To get the lastest API key:
 
