@@ -1,4 +1,8 @@
-## Another bout of testing
+## Unreleased
+
+  - Fixing workflow
+
+## v10.6.0 (2023-09-14)
 
   - Removing task
   - updating workflow
