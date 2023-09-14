@@ -1,4 +1,4 @@
-## Unreleased
+## v10.7.0 (2023-09-14)
 
   - Fixing workflow
 
